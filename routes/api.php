@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/index', 'BrushController@index');
+Route::get('/{brush_id}/took', 'BrushController@took');
+Route::get('/{brush_id}/put', 'BrushController@put');

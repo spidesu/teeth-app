@@ -19,9 +19,9 @@ class CreateBrushesTable extends Migration
             $table->timestamp('started_at');
             $table->timestamp('ended_at')->nullable();
             $table->integer('duration')->nullable();
-            $table->unsignedBigInteger('brush_id');
+            $table->unsignedBigInteger('tooth_brush_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('brush_id')->references('id')->on('tooth_brushes');
+            $table->foreign('tooth_brush_id')->references('id')->on('tooth_brushes');
             $table->timestamps();
         });
     }

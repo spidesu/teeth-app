@@ -36,4 +36,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function brushes() {
+        return $this->hasMany('App\Brush');
+    }
+    public function toothbrush() {
+        return $this->hasOne('App\ToothBrush');
+    }
 }

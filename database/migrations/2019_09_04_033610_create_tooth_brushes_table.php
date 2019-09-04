@@ -15,6 +15,7 @@ class CreateToothBrushesTable extends Migration
     {
         Schema::create('tooth_brushes', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('serial_number');
             $table->timestamps();
         });
 
